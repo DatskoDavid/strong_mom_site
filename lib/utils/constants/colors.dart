@@ -7,4 +7,11 @@ abstract class AppColors {
   static const white = Color(0xFFFFFFFF);
 
   static const darkText = Color(0xFF23153E);
+  static const lightText = Color(0xFF443A5A);
+
+  static const red = Color(0xFFFF2D55);
+
+  static const marketBtnBorder = Color(0xFFA6A6A6);
+
+  
 }

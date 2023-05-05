@@ -11,15 +11,16 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
           'LOGO',
           style: AppTextStyles.headerTitle,
         ),
-        SizedBox(width: 200),
+        Spacer(flex: 8),
         HeaderNavigationBar(),
+        Spacer(),
         DropdownDownloadButton(),
+        Spacer(),
         DropdownLanguageButton(),
       ],
     );

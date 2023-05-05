@@ -1,6 +1,5 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:test_task/utils/constants/colors.dart';
 import 'package:test_task/utils/constants/text_styles.dart';
@@ -13,25 +12,25 @@ class DropdownLanguageButton extends StatefulWidget {
 }
 
 class _DropdownLanguageButtonState extends State<DropdownLanguageButton> {
+  String choosedLang = 'Eng';
+
   @override
   Widget build(BuildContext context) {
     return DropdownButtonHideUnderline(
       child: DropdownButton2(
-        customButton: const SizedBox(
-          width: 145,
-          child: Row(
-            children: [
-              Text(
-                'Eng',
-                style: AppTextStyles.headerMenuItem,
-              ),
-              SizedBox(width: 5),
-              Icon(
-                Icons.keyboard_arrow_down_rounded,
-                color: AppColors.purple1,
-              ),
-            ],
-          ),
+        customButton: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Text(
+              choosedLang,
+              style: AppTextStyles.headerMenuItem,
+            ),
+            const SizedBox(width: 7),
+            const Icon(
+              Icons.keyboard_arrow_down_rounded,
+              color: AppColors.purple1,
+            ),
+          ],
         ),
         openWithLongPress: false,
         items: [
@@ -43,10 +42,10 @@ class _DropdownLanguageButtonState extends State<DropdownLanguageButton> {
           ),
         ],
         onChanged: (value) {
-          MenuItems.onChanged(context, value as MenuItem);
-        },
+              MenuItems.onChanged(context, value as MenuItem);
+            },
         dropdownStyleData: DropdownStyleData(
-          width: 174,
+          width: 145,
           padding: const EdgeInsets.symmetric(vertical: 6),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(4),
@@ -81,18 +80,22 @@ class MenuItems {
 
   static const sverige = MenuItem(
     text: 'Sverige',
-    icon: 'assets/images/lang_icons/sverige.svg',
+    icon: 'assets/images/lang_icons/sverige.png',
   );
   static const english = MenuItem(
     text: 'English',
-    icon: 'assets/images/lang_icons/english.svg',
+    icon: 'assets/images/lang_icons/english.png',
   );
 
   static Widget buildItem(MenuItem item) {
     return Row(
       children: [
-        SvgPicture.asset(item.icon),
-        const SizedBox(width: 10),
+        Image.asset(
+          item.icon,
+          width: 22,
+          height: 22,
+        ),
+        const SizedBox(width: 7),
         Text(
           item.text,
           style: AppTextStyles.dropdownMenuItem,
@@ -102,13 +105,6 @@ class MenuItems {
   }
 
   static onChanged(BuildContext context, MenuItem item) {
-    switch (item) {
-      case MenuItems.sverige:
-        //Do something
-        break;
-      case MenuItems.english:
-        //Do something
-        break;
-    }
+    // changeLang(item.text);
   }
 }

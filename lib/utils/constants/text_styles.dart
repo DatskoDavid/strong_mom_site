@@ -25,4 +25,28 @@ abstract class AppTextStyles {
     color: AppColors.darkText,
     fontWeight: FontWeight.w400,
   );
+
+  static const blockHeader = TextStyle(
+    fontSize: 56,
+    color: AppColors.darkText,
+    fontWeight: FontWeight.w700,
+  );
+
+  static const subtitle = TextStyle(
+    fontSize: 32,
+    color: AppColors.lightText,
+    fontWeight: FontWeight.w500,
+  );
+
+  static const largeText = TextStyle(
+    fontSize: 24,
+    color: AppColors.lightText,
+    fontWeight: FontWeight.w400,
+  );
+
+  static const regularText = TextStyle(
+    fontSize: 18,
+    color: AppColors.lightText,
+    fontWeight: FontWeight.w400,
+  );
 }

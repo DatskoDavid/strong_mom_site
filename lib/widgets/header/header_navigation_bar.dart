@@ -12,7 +12,7 @@ class _HeaderNavigationBarState extends State<HeaderNavigationBar> {
   @override
   Widget build(BuildContext context) {
     return const SizedBox(
-      width: 500,
+      width: 476,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
