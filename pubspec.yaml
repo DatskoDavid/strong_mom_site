@@ -66,7 +66,7 @@ flutter:
   assets:
     - assets/graphics/
     - assets/images/lang_icons/
-    - assets/images/iphone.png
+    - assets/images/iphones/
     - assets/graphics/markets/app_store/
     - assets/graphics/markets/play_market/
 
