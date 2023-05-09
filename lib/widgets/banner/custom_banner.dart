@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:test_task/utils/constants/colors.dart';
 import 'package:test_task/utils/constants/text_styles.dart';
 
 import '../separator_line.dart';
@@ -17,6 +18,7 @@ class CustomBanner extends StatelessWidget {
           SvgPicture.asset(
             'assets/graphics/banner_bg.svg',
             semanticsLabel: 'banner_bg',
+            color: AppColors.bannerBackground,
             height: 770,
           ),
           const Positioned(
@@ -27,7 +29,7 @@ class CustomBanner extends StatelessWidget {
               children: [
                 Text(
                   'Strong for life \nwith us',
-                  style: AppTextStyles.blockHeader,
+                  style: AppTextStyles.headline1,
                 ),
                 SizedBox(height: 21),
                 SeparatorLine(),
@@ -62,11 +64,11 @@ through all stages of pregnancy.''',
           ),
           Positioned(
             bottom: 0,
-            right: 125,
+            right: 46.36,
             child: Image.asset(
-              'assets/images/iphone.png',
-              height: 676.3,
-              width: 312.33,
+              'assets/images/iphones/iphone1.png',
+              height: 710.01,
+              width: 534.28,
             ),
           ),
         ],

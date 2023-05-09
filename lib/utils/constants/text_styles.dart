@@ -26,8 +26,20 @@ abstract class AppTextStyles {
     fontWeight: FontWeight.w400,
   );
 
-  static const blockHeader = TextStyle(
+  static const headline1 = TextStyle(
     fontSize: 56,
+    color: AppColors.darkText,
+    fontWeight: FontWeight.w700,
+  );
+
+  static const headline2 = TextStyle(
+    fontSize: 50,
+    color: AppColors.darkText,
+    fontWeight: FontWeight.w700,
+  );
+
+  static const headline3 = TextStyle(
+    fontSize: 40,
     color: AppColors.darkText,
     fontWeight: FontWeight.w700,
   );

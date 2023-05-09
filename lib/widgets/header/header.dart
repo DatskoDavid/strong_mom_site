@@ -10,19 +10,22 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
-      children: [
-        Text(
-          'LOGO',
-          style: AppTextStyles.headerTitle,
-        ),
-        Spacer(flex: 8),
-        HeaderNavigationBar(),
-        Spacer(),
-        DropdownDownloadButton(),
-        Spacer(),
-        DropdownLanguageButton(),
-      ],
+    return const SizedBox(
+      height: 100,
+      child: Row(
+        children: [
+          Text(
+            'LOGO',
+            style: AppTextStyles.headerTitle,
+          ),
+          Spacer(flex: 8),
+          HeaderNavigationBar(),
+          Spacer(),
+          DropdownDownloadButton(),
+          Spacer(),
+          DropdownLanguageButton(),
+        ],
+      ),
     );
   }
 }

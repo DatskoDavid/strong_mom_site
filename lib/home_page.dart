@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'widgets/banner/custom_banner.dart';
+import 'widgets/big_block/big_block.dart';
 import 'widgets/header/header.dart';
-import 'widgets/short_info_block/short_info_bloc.dart';
+import 'widgets/small_block/small_bloc.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -13,13 +14,15 @@ class HomePage extends StatelessWidget {
         child: SizedBox(
           width: 1240,
           child: ListView(
-            padding: const EdgeInsets.only(top: 28.0),
             children: const [
               Header(),
-              SizedBox(height: 83),
-              ShortInfoBlock(),
-              SizedBox(height: 160),
+              SizedBox(height: 60),
               CustomBanner(),
+              SizedBox(height: 160),
+              SmallBlock(),
+              SizedBox(height: 160),
+              BigBlock(),
+              
             ],
           ),
         ),
