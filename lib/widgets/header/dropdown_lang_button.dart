@@ -42,8 +42,10 @@ class _DropdownLanguageButtonState extends State<DropdownLanguageButton> {
           ),
         ],
         onChanged: (value) {
-              MenuItems.onChanged(context, value as MenuItem);
-            },
+          setState(() {
+            choosedLang = value!.text.substring(0, 3);
+          });
+        },
         dropdownStyleData: DropdownStyleData(
           width: 145,
           padding: const EdgeInsets.symmetric(vertical: 6),
@@ -102,9 +104,5 @@ class MenuItems {
         ),
       ],
     );
-  }
-
-  static onChanged(BuildContext context, MenuItem item) {
-    // changeLang(item.text);
   }
 }
