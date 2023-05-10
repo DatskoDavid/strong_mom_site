@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:test_task/utils/constants/colors.dart';
 import 'package:test_task/utils/constants/text_styles.dart';
 
 import '../separator_line.dart';
@@ -18,7 +17,6 @@ class CustomBanner extends StatelessWidget {
           SvgPicture.asset(
             'assets/graphics/banner_bg.svg',
             semanticsLabel: 'banner_bg',
-            color: AppColors.bannerBackground,
             height: 770,
           ),
           const Positioned(

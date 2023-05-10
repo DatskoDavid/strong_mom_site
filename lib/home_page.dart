@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_task/widgets/blog/blog.dart';
 import 'widgets/banner/custom_banner.dart';
 import 'widgets/big_block/big_block.dart';
 import 'widgets/header/header.dart';
@@ -22,7 +23,9 @@ class HomePage extends StatelessWidget {
               SmallBlock(),
               SizedBox(height: 160),
               BigBlock(),
-              
+              SizedBox(height: 160),
+              Blog(),
+              SizedBox(height: 81)
             ],
           ),
         ),

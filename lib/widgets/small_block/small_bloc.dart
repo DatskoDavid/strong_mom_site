@@ -34,7 +34,7 @@ class SmallBlock extends StatelessWidget {
               title: 'Create timeline',
               description:
                   'Take pictures along the way during and after the \npregnancy to see the transformation.',
-              icon: 'assets/graphics/search_icon.svg',
+              icon: 'assets/graphics/statistic_icon.svg',
             ),
           ],
         )

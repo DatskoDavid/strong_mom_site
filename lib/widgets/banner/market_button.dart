@@ -16,34 +16,37 @@ class MarketButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 50,
-      width: 170,
-      padding: const EdgeInsets.only(left: 12),
-      decoration: BoxDecoration(
-        color: AppColors.white,
-        border: Border.all(
-          color: AppColors.marketBtnBorder,
-          width: 1,
+    return InkWell(
+      onTap: (){},
+      child: Container(
+        height: 50,
+        width: 170,
+        padding: const EdgeInsets.only(left: 12),
+        decoration: BoxDecoration(
+          color: AppColors.white,
+          border: Border.all(
+            color: AppColors.marketBtnBorder,
+            width: 1,
+          ),
+          borderRadius: BorderRadius.circular(5),
         ),
-        borderRadius: BorderRadius.circular(5),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          SvgPicture.asset(icon),
-          const SizedBox(width: 10),
-          Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SvgPicture.asset(text),
-                SvgPicture.asset(market),
-              ],
-            ),
-          )
-        ],
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SvgPicture.asset(icon),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SvgPicture.asset(text),
+                  SvgPicture.asset(market),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

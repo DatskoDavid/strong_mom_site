@@ -67,6 +67,8 @@ flutter:
     - assets/graphics/
     - assets/images/lang_icons/
     - assets/images/iphones/
+    - assets/images/blog/article_bg/
+    - assets/images/blog/author_avatars/
     - assets/graphics/markets/app_store/
     - assets/graphics/markets/play_market/
 
