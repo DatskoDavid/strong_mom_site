@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_task/widgets/blog/blog.dart';
+import 'package:test_task/widgets/go_to_form/go_to_form.dart';
 import 'widgets/banner/custom_banner.dart';
 import 'widgets/big_block/big_block.dart';
 import 'widgets/header/header.dart';
@@ -18,8 +19,9 @@ class HomePage extends StatelessWidget {
             children: const [
               Header(),
               SizedBox(height: 60),
-              CustomBanner(),
+              GoToForm(), 
               SizedBox(height: 160),
+              CustomBanner(),
               SmallBlock(),
               SizedBox(height: 160),
               BigBlock(),

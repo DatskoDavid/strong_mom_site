@@ -38,6 +38,12 @@ abstract class AppTextStyles {
     fontWeight: FontWeight.w700,
   );
 
+  static const whiteHeadline2 = TextStyle(
+    fontSize: 50,
+    color: AppColors.white,
+    fontWeight: FontWeight.w700,
+  );
+
   static const headline3 = TextStyle(
     fontSize: 40,
     color: AppColors.darkText,
