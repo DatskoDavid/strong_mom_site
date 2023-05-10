@@ -23,7 +23,10 @@ class Header extends StatelessWidget {
           Spacer(),
           DropdownDownloadButton(),
           Spacer(),
-          DropdownLanguageButton(),
+          Flexible(
+            flex: 2,
+            child: DropdownLanguageButton(),
+          ),
         ],
       ),
     );
