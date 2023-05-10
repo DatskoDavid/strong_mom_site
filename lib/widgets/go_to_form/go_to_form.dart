@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:test_task/pages/form_page.dart';
 import 'package:test_task/utils/constants/colors.dart';
 import 'package:test_task/utils/constants/text_styles.dart';
 
@@ -22,7 +23,14 @@ class GoToForm extends StatelessWidget {
                   style: AppTextStyles.whiteHeadline2,
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const FormPage(),
+                      ),
+                    );
+                  },
                   child: Container(
                     width: 392,
                     height: 58,

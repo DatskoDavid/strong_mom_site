@@ -91,4 +91,22 @@ abstract class AppTextStyles {
     color: AppColors.white,
     fontWeight: FontWeight.w400,
   );
+
+  static const textFieldHint = TextStyle(
+    fontSize: 18,
+    color: AppColors.grey,
+    fontWeight: FontWeight.w400,
+  );
+
+  static const footerTitle = TextStyle(
+    fontSize: 40,
+    color: AppColors.white,
+    fontWeight: FontWeight.w700,
+  );
+
+  static const footerText = TextStyle(
+    fontSize: 24,
+    color: AppColors.white,
+    fontWeight: FontWeight.w400,
+  );
 }
