@@ -19,6 +19,15 @@ class CustomForm extends StatelessWidget {
     debugPrint('Email: ${_emailController.text}');
     debugPrint('Adress: ${_adressController.text}');
     debugPrint('----------------------');
+
+    clearText();
+  }
+
+  void clearText() {
+    _firstNameController.clear();
+    _secondNameController.clear();
+    _emailController.clear();
+    _adressController.clear();
   }
 
   @override

@@ -2,6 +2,7 @@ import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:test_task/utils/constants/colors.dart';
 import 'package:test_task/utils/constants/text_styles.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DropdownDownloadButton extends StatefulWidget {
   const DropdownDownloadButton({Key? key}) : super(key: key);
@@ -34,13 +35,16 @@ class _DropdownDownloadButtonState extends State<DropdownDownloadButton> {
           ...MenuItems.items.map(
             (item) => DropdownMenuItem<MenuItem>(
               value: item,
-              child: MenuItems.buildItem(item),
+              child: InkWell(
+                onTap: () => launchUrl(
+                  Uri.parse(item.link),
+                ),
+                child: MenuItems.buildItem(item),
+              ),
             ),
           ),
         ],
-        onChanged: (value) {
-          MenuItems.onChanged(context, value as MenuItem);
-        },
+        onChanged: (value) {},
         dropdownStyleData: DropdownStyleData(
           width: 174,
           padding: const EdgeInsets.symmetric(vertical: 6),
@@ -64,33 +68,31 @@ class _DropdownDownloadButtonState extends State<DropdownDownloadButton> {
 
 class MenuItem {
   final String text;
+  final String link;
 
   const MenuItem({
     required this.text,
+    required this.link,
   });
 }
 
 class MenuItems {
   static const List<MenuItem> items = [appStore, googlePlay];
 
-  static const appStore = MenuItem(text: 'App Store');
-  static const googlePlay = MenuItem(text: 'Google Play');
+  static const appStore = MenuItem(
+    text: 'App Store',
+    link: 'https://apps.apple.com/ua/app/strongmom/id1042565589',
+  );
+  static const googlePlay = MenuItem(
+    text: 'Google Play',
+    link:
+        'https://play.google.com/store/apps/details?id=com.strongmomapp&hl=ru&gl=US',
+  );
 
   static Widget buildItem(MenuItem item) {
     return Text(
       item.text,
       style: AppTextStyles.dropdownMenuItem,
     );
-  }
-
-  static onChanged(BuildContext context, MenuItem item) {
-    switch (item) {
-      case MenuItems.appStore:
-        //Do something
-        break;
-      case MenuItems.googlePlay:
-        //Do something
-        break;
-    }
   }
 }
