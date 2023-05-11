@@ -12,23 +12,29 @@ class CustomForm extends StatelessWidget {
   final _emailController = TextEditingController();
   final _adressController = TextEditingController();
 
-  void _submitButtonHandler() {
+  void _submitButtonHandler(context) {
+    _printFormInput();
+    _disposeControllers();
+    _goToHomePage(context);
+  }
+
+  void _printFormInput() {
     debugPrint('\tFORM');
     debugPrint('First Name: ${_firstNameController.text}');
     debugPrint('Second Name: ${_secondNameController.text}');
     debugPrint('Email: ${_emailController.text}');
     debugPrint('Adress: ${_adressController.text}');
     debugPrint('----------------------');
-
-    clearText();
   }
 
-  void clearText() {
-    _firstNameController.clear();
-    _secondNameController.clear();
-    _emailController.clear();
-    _adressController.clear();
+  void _disposeControllers() {
+    _firstNameController.dispose();
+    _secondNameController.dispose();
+    _emailController.dispose();
+    _adressController.dispose();
   }
+
+  void _goToHomePage(context) => Navigator.pop(context);
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +72,8 @@ class CustomForm extends StatelessWidget {
                   controller: _adressController,
                 ),
                 const SizedBox(height: 24),
-                SubmitButton(handler: _submitButtonHandler),
+                SubmitButton(
+                    handler: (context) => _submitButtonHandler(context)),
               ],
             ),
           ),

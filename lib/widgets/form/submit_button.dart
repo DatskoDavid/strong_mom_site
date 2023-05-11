@@ -4,14 +4,14 @@ import '../../utils/constants/colors.dart';
 import '../../utils/constants/text_styles.dart';
 
 class SubmitButton extends StatelessWidget {
-  final Function handler;
+  final Function(BuildContext) handler;
    
   const SubmitButton({Key? key, required this.handler}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => handler(),
+      onTap: () => handler(context),
       child: Container(
         width: 392,
         height: 58,
