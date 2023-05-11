@@ -1,23 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:test_task/utils/constants/colors.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MarketButton extends StatelessWidget {
   final String market;
   final String icon;
   final String text;
+  final String link;
 
   const MarketButton({
     super.key,
     required this.market,
     required this.icon,
     required this.text,
+    required this.link,
   });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (){},
+      onTap: (){
+        launchUrl(Uri.parse(link));
+      },
       child: Container(
         height: 50,
         width: 170,

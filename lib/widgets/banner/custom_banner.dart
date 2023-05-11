@@ -47,6 +47,8 @@ through all stages of pregnancy.''',
                       icon: 'assets/graphics/markets/app_store/logo.svg',
                       text:
                           'assets/graphics/markets/app_store/download_on_the.svg',
+                      link:
+                          'https://apps.apple.com/ua/app/strongmom/id1042565589',
                     ),
                     SizedBox(width: 40),
                     MarketButton(
@@ -54,6 +56,8 @@ through all stages of pregnancy.''',
                           'assets/graphics/markets/play_market/google_play.svg',
                       icon: 'assets/graphics/markets/play_market/logo.svg',
                       text: 'assets/graphics/markets/play_market/get_on_it.svg',
+                      link:
+                          'https://play.google.com/store/apps/details?id=com.strongmomapp&hl=ru&gl=US',
                     ),
                   ],
                 ),
