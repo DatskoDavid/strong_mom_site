@@ -12,18 +12,22 @@ class Footer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 75),
+      height: 302,
+      // padding: const EdgeInsets.symmetric(vertical: 75),
       decoration: const BoxDecoration(color: AppColors.footerBg),
       child: Center(
         child: SizedBox(
           width: 1240,
-          height: 302,
+          height: 150,
           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const Text(
-                'LOGO',
-                style: AppTextStyles.footerTitle,
+              const Align(
+                alignment: Alignment.topCenter,
+                child: Text(
+                  'LOGO',
+                  style: AppTextStyles.footerTitle,
+                ),
               ),
               const SizedBox(width: 92),
               SizedBox(
@@ -72,44 +76,48 @@ class Footer extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 36),
-              SizedBox(
-                width: 188,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    GestureDetector(
-                      onTap: () => launchUrl(
-                        Uri.parse('https://www.facebook.com/'),
+              Align(
+                alignment: Alignment.topCenter,
+                child: Container(
+                  width: 188,
+                  padding: const EdgeInsets.only(top: 15),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      GestureDetector(
+                        onTap: () => launchUrl(
+                          Uri.parse('https://www.facebook.com/'),
+                        ),
+                        child: SvgPicture.asset(
+                          'assets/graphics/social_media_logo/facebook.svg',
+                        ),
                       ),
-                      child: SvgPicture.asset(
-                        'assets/graphics/social_media_logo/facebook.svg',
+                      GestureDetector(
+                        onTap: () => launchUrl(
+                          Uri.parse('https://www.instagram.com/'),
+                        ),
+                        child: SvgPicture.asset(
+                          'assets/graphics/social_media_logo/instagram.svg',
+                        ),
                       ),
-                    ),
-                    GestureDetector(
-                      onTap: () => launchUrl(
-                        Uri.parse('https://www.instagram.com/'),
+                      GestureDetector(
+                        onTap: () => launchUrl(
+                          Uri.parse('https://www.youtube.com/'),
+                        ),
+                        child: SvgPicture.asset(
+                          'assets/graphics/social_media_logo/youtube.svg',
+                        ),
                       ),
-                      child: SvgPicture.asset(
-                        'assets/graphics/social_media_logo/instagram.svg',
+                      GestureDetector(
+                        onTap: () => launchUrl(
+                          Uri.parse('https://www.pinterest.com/'),
+                        ),
+                        child: SvgPicture.asset(
+                          'assets/graphics/social_media_logo/pinterest.svg',
+                        ),
                       ),
-                    ),
-                    GestureDetector(
-                      onTap: () => launchUrl(
-                        Uri.parse('https://www.youtube.com/'),
-                      ),
-                      child: SvgPicture.asset(
-                        'assets/graphics/social_media_logo/youtube.svg',
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () => launchUrl(
-                        Uri.parse('https://www.pinterest.com/'),
-                      ),
-                      child: SvgPicture.asset(
-                        'assets/graphics/social_media_logo/pinterest.svg',
-                      ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ],
